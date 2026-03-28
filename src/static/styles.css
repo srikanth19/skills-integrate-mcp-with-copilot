@@ -24,6 +24,37 @@ header {
   border-radius: 5px;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-pill {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.auth-pill--active {
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+  color: #102b11;
+  font-weight: bold;
+}
+
 header h1 {
   margin-bottom: 10px;
 }
@@ -48,6 +79,22 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+}
+
+#auth-container {
+  margin-bottom: 24px;
+  max-width: 100%;
+}
+
+.auth-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.auth-note {
+  margin-top: 10px;
+  color: #455a64;
 }
 
 section h3 {
@@ -160,6 +207,35 @@ button {
   transition: background-color 0.2s;
 }
 
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  margin-left: 10px;
+  background-color: #455a64;
+}
+
+.secondary-btn:hover {
+  background-color: #607d8b;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #1a237e;
+  padding: 6px 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 14px;
+}
+
+.link-btn:hover {
+  background: none;
+  color: #3949ab;
+}
+
 button:hover {
   background-color: #3949ab;
 }
@@ -190,6 +266,17 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-actions {
+    justify-content: center;
+  }
 }
 
 footer {

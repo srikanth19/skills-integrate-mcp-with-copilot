@@ -8,9 +8,58 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="header-actions">
+          <div class="auth-pill" id="auth-pill">Not signed in</div>
+          <button type="button" id="auth-toggle-btn" class="secondary-btn">Login</button>
+        </div>
+      </div>
     </header>
+
+    <section id="auth-container" class="hidden" aria-label="Authentication">
+      <h3>Account Access</h3>
+      <div id="auth-status" class="info">Sign in as admin/faculty/coordinator to register or unregister students.</div>
+
+      <div class="auth-grid">
+        <form id="login-form">
+          <h4>Login</h4>
+          <div class="form-group">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required placeholder="faculty1" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required placeholder="ChangeMe123!" />
+          </div>
+          <button type="submit">Login</button>
+          <button type="button" id="logout-btn" class="secondary-btn hidden">Logout</button>
+          <button type="button" id="show-register-btn" class="link-btn">Need an account? Register as student</button>
+        </form>
+
+        <form id="register-form" class="hidden">
+          <h4>Student Registration</h4>
+          <div class="form-group">
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" required placeholder="newstudent" />
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" required placeholder="newstudent@mergington.edu" />
+          </div>
+          <div class="form-group">
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" required placeholder="At least 8 chars" />
+          </div>
+          <button type="submit">Create Student Account</button>
+          <button type="button" id="show-login-btn" class="link-btn">Back to login</button>
+        </form>
+      </div>
+      <p class="auth-note"><strong>Seed accounts:</strong> admin1, faculty1, coordinator1, student1 (password: ChangeMe123!)</p>
+    </section>
 
     <main>
       <section id="activities-container">
@@ -22,7 +71,8 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>Register Student for an Activity</h3>
+        <p class="auth-note">Only logged-in users with role <strong>admin</strong>, <strong>faculty</strong>, or <strong>coordinator</strong> can submit this form.</p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
