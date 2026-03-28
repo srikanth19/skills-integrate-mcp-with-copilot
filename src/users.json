@@ -1,0 +1,22 @@
+{
+  "admin1": {
+    "email": "admin1@mergington.edu",
+    "password_hash": "$2b$12$placeholder.will.be.regenerated.if.invalid",
+    "role": "admin"
+  },
+  "faculty1": {
+    "email": "faculty1@mergington.edu",
+    "password_hash": "$2b$12$placeholder.will.be.regenerated.if.invalid",
+    "role": "faculty"
+  },
+  "coordinator1": {
+    "email": "coordinator1@mergington.edu",
+    "password_hash": "$2b$12$placeholder.will.be.regenerated.if.invalid",
+    "role": "coordinator"
+  },
+  "student1": {
+    "email": "student1@mergington.edu",
+    "password_hash": "$2b$12$placeholder.will.be.regenerated.if.invalid",
+    "role": "student"
+  }
+}
