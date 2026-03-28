@@ -3,3 +3,5 @@ uvicorn
 passlib[bcrypt]
 email-validator
 itsdangerous
+sqlalchemy>=2.0
+pymysql
